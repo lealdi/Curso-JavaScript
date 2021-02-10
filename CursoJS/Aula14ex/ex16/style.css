@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(80, 145, 241);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+
+footer{
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+.container{
+    margin: 5px 0 5px 0;
+    text-align: center;    
+}
+
+.container input[type="number"]{
+    margin: 0 auto;
+    display: block;
+}
+
+.mostrar{
+    margin-top: 10px;
+}

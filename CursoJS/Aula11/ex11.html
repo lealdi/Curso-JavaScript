@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar sisteminha de estrangeiros</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgb(116, 119, 116);
+        }
+
+        .conteiner{
+            position: relative;
+            text-align: center;
+            border: 2px solid black;
+            width: 50%;
+            height: 400px;
+            margin:10% auto;
+        }
+
+        .caixa1{     
+            margin-top: 60px;       
+            
+            font-size: 20px;            
+        }
+
+        .caixa1 select{        
+            background-color: rgb(52, 106, 131);               
+            width: 200px;
+            height: 50px;
+            margin-top: 30px;
+        }
+
+        .resultado{       
+            position: relative;                        
+            margin-top: 30px; 
+            width: 320px;
+            height: 100px;
+            border: 2px solid black;
+            display: inline-block;
+        }   
+
+        .resultado p{
+            font-size: 20px;
+            top: 40px;
+            left: 90px;
+            position: absolute;            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Você é Brasileiro ou Estrangeiro ? Descubra abaixo</h1>
+
+        <div class="caixa1">
+        <p>Selecione o seu pais para analisarmos</p>        
+        <select onchange="brasileiro()" name="selecao" id="selecao">
+            <option id="selecione" value="">Selecione:</option>
+            <option id="brasil" value="Brazil">Brazil</option>
+            <option id="eua" value="Eua">Estados Unidos</option>
+        </select>
+        
+              
+        
+        
+        </div><!--caixa1-->
+
+        <div class="resultado">
+            <p>Resultado: </p>
+            
+        </div>
+
+    </div><!--conteiner-->
+
+    <script>        
+
+        function brasileiro(){
+            var selecao = window.document.getElementById("selecao").value;
+             
+
+        if(selecao == "Brazil"){
+           document.querySelector(".resultado").innerHTML = "<p>Voce e brasileiro</p>";
+           document.querySelector(".resultado").style.background = "green";
+        }
+        else if(selecao == "Eua"){
+            document.querySelector(".resultado").innerHTML = "<p>Voce e Americano</p>";
+            document.querySelector(".resultado").style.background = "blue";
+        }
+        else{
+            document.querySelector(".resultado").innerHTML = "<p>Selecione um pais</p>";
+            document.querySelector(".resultado").style.background = "white";
+        }
+    }
+      
+
+       
+    </script>
+</body>
+</html>

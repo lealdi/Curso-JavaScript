@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+            color: white;
+            background-color: rgb(40, 110, 201);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em javascript</p>
+    <div id="msg">Clica em mim</div>
+
+    <script>
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName("p")[1];  //Esta pegando algum elemento que no caso e o paragrafo , e selecionando o primeiro utilizando []        
+        /*
+        document.write(p1.innerHTML); //Escreve a variavel na tela e tambem puxa o os elementos STRONG que faz ficar em negrito.
+        p1.style.color = "blue"; //Altera a cor da variavel p1
+        corpo.style.backgroundColor = "black"; //Altera o background da pagina
+
+        var d = window.document.getElementById("msg");
+        d.style.backgroundColor = "green";
+        */
+
+        var d = window.document.querySelector("div#msg");
+        d.style.color = "blue";
+
+    </script>
+</body>
+</html>
