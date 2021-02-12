@@ -9,13 +9,16 @@ function adicionar() {
 
 
 function verificar() {    
-    var maior = Math.max(...numeros)
-
-    var paragrafo = document.createElement("p")  // Criando paragrafo dinamico
-    var texto_total = document.createTextNode("Temos " + numeros.length + " numeros cadastrados ate o momento ")   
-    
-
+    let paragrafo = document.createElement("p")  
+    let texto_total = document.createTextNode("Temos " + numeros.length + " numeros cadastrados ate o momento ")   
     paragrafo.appendChild(texto_total)
-    document.querySelector("#exibir").appendChild(paragrafo)
+    document.querySelector("#exibir").appendChild(paragrafo)  // Esse trecho de codigo mostra os numeros adicionados ate o momento
+
+    let paragrafo_maior = document.createElement("p")    
+    var maior = Math.max(...numeros)
+    let texto_maior = document.createTextNode(`Maior numero ate o momento ${maior}`)
+    paragrafo_maior.appendChild(texto_maior)
+    document.querySelector("#exibir").appendChild(paragrafo_maior)
+
 }
 
