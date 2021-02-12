@@ -23,12 +23,30 @@ footer{
     font-style: italic;
 }
 
+.clear{
+    clear: both;
+}
+
 .botao{
     margin-left: 5px;
 }
 
 #area-texto{    
+    display: inline-block;
     width: 100%;
     resize: none;
     overflow-y: scroll;
+}
+
+.verificar , .limpar{
+    display: inline-block;    
+    text-align: center;
+}
+
+.verificar{
+    
+}
+
+.limpar{
+    float: right;
 }

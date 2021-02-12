@@ -16,14 +16,14 @@ function verificar() {
 
     let paragrafo_maior = document.createElement("p")    
     let maior = Math.max(...numeros)
-    let texto_maior = document.createTextNode(`Maior numero ate o momento ${maior}`)
+    let texto_maior = document.createTextNode(`Maior numero até o momento ${maior}`)
     paragrafo_maior.appendChild(texto_maior)
     document.querySelector("#exibir").appendChild(paragrafo_maior)
     //Trecho para mostrar maior numero dentro do array
 
     let paragrafo_menor = document.createElement("p")
     let menor = Math.min(...numeros)
-    let texto_menor = document.createTextNode(`Menor numero ate o momento ${menor}`)
+    let texto_menor = document.createTextNode(`Menor numero até o momento ${menor}`)
     paragrafo_menor.appendChild(texto_menor)
     document.querySelector("#exibir").appendChild(paragrafo_menor)
     //Trecho para mostrar menor numero dentro do array    
@@ -38,6 +38,20 @@ function verificar() {
     document.querySelector("#exibir").appendChild(paragrafo_soma)  
     // Exibe a soma de todos os elementos numericos dentro do array
 
+    elementos = numeros.length
+    total = numeros.reduce(soma,0)
+    media = total / elementos
+    // Calculo das Medias
+
+    let paragrafo_media = document.createElement("p")
+    let texto_media = document.createTextNode(`A media dos elementos é ${media}`)
+    paragrafo_media.appendChild(texto_media)
+    document.querySelector("#exibir").appendChild(paragrafo_media)
+    //Exibir a media na tela
+
 
 }
 
+function limpar() {
+    document.querySelector("#exibir").remove();
+}
