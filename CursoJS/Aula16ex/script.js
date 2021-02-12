@@ -3,12 +3,24 @@ var numeros = [];
 function adicionar() {
     var numero = document.querySelector("#numero").value;
     numeros.push(numero);
+    if(numero < 0 || numero > 101) {
+        window.alert("Digite algum numero entre 0 e 100")
+        location.reload(); // Faz um refresh na pagina
+    }
+    else{
     let text_area = document.querySelector("#area-texto").innerHTML += `Adicionando número ${numero}\n`; 
+    }
 }
 
 
-
 function verificar() {    
+    
+    if(numeros.length === 0){
+        window.alert("Adicione algum numero antes de finalizar")
+    }
+
+    else{
+
     let paragrafo = document.createElement("p")  
     let texto_total = document.createTextNode("Temos " + numeros.length + " numeros cadastrados ate o momento ")   
     paragrafo.appendChild(texto_total)
@@ -49,9 +61,11 @@ function verificar() {
     document.querySelector("#exibir").appendChild(paragrafo_media)
     //Exibir a media na tela
 
-
+    }
 }
 
 function limpar() {
     document.querySelector("#exibir").remove();
+    document.querySelector("#area-texto").remove();
+    location.reload(); // Faz um refresh na pagina
 }
